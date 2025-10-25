@@ -1,0 +1,154 @@
+/* 全体 */
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    background: #fafafa;
+    color: #333;
+    text-align: center;
+}
+
+
+/* ===== ヘッダー ===== */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e96b88;
+}
+
+a {
+    color: #e96b88;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* タブ */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.tab-button {
+    border: none;
+    background: #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.tab-button.active {
+    background: #ffb6c1;
+    font-weight: bold;
+}
+
+/* 作品カード */
+.works-container {
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.tab-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.work-card {
+    width: 300px;
+    background: #fff6f8;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.work-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== フッター ===== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+    .tab-content {
+        flex-direction: column;
+    }
+
+    .work-card {
+        width: 90%;
+    }
+}

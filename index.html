@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塩ポテト君 - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- ===== ヘッダー ===== -->
+    <header>
+        <h1>塩ポテト君 Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#charts">マイチャート</a></li>
+                <li><a href="#skills">資格・スキル</a></li>
+                <li><a href="works/index.html">作品一覧</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== 自己紹介 ===== -->
+        <section id="about" class="section">
+            <h2>自己紹介</h2>
+            <p>専門学校でゲームプログラミングを学んでいる塩ポテト君(PotatoTimeKun)です。<br>
+                Unityを用いた2D/3Dゲーム開発を中心に活動しています。<br>
+                高専で低レイヤも含めた幅広い情報工学を学びました。<br>
+                専門学校からは特にゲーム開発を中心に、実用性を重視して学んでいます。</p>
+        </section>
+
+        <!-- ===== レーダーチャート ===== -->
+        <section id="charts" class="section">
+            <div class="chart-pair">
+                <div>
+                    <h2>好きなゲームジャンル</h2>
+                    <canvas id="genreChart" width="300" height="300"></canvas>
+                </div>
+                <div>
+                    <h2>得意な言語・ツール</h2>
+                    <canvas id="techChart" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 資格・スキル一覧 ===== -->
+        <section id="skills" class="section">
+            <h2>所持スキル・資格</h2>
+            <ul>
+                <li>基本情報技術者試験 合格</li>
+                <li><b>応用情報技術者試験 合格</b></li>
+                <li>paizaスキルチェック Sランク</li>
+                <li><b>Unity / C# を用いたゲーム開発</b></li>
+                <li>UnrealEngine / Blueprint を用いたゲーム開発</li>
+                <li>Blender による簡易的なモデリング</li>
+                <li><b>Python によるデータ処理・ツール制作</b></li>
+                <li><b>Git / GitHub によるバージョン管理</b></li>
+                <li>Flutter / Dart によるアプリ開発</li>
+                <li>HTML / CSS / JS によるWEBページ作成</li>
+                <li>Linuxサーバの基本的な操作</li>
+                <li>UML による設計図作成</li>
+            </ul>
+        </section>
+
+        <!-- ===== 作品リンク ===== -->
+        <section id="works-link" class="section">
+            <h2>作品一覧へ</h2>
+            <p>これまでに制作したゲーム・プログラム作品を紹介しています。</p>
+            <a href="works/index.html" class="button">作品一覧を見る</a>
+        </section>
+    </main>
+
+    <!-- ===== フッター ===== -->
+    <footer>
+        <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // === Chart.js レーダーチャート ===
+        const genreCtx = document.getElementById('genreChart');
+        new Chart(genreCtx, {
+            type: 'radar',
+            data: {
+                labels: ["パズル", "ローグライク", "シミュレーション", "アクション", "RPG",
+                    "PvP", "PvE", "2D", "3D", "オープンワールド",
+                    "音ゲー", "カード", "街作り", "ホラー", "マルチプレイ",
+                    "ソウルライク", "サンドボックス", "ストラテジー", "スマホゲーム", "PCゲーム"],
+                datasets: [{
+                    label: '好きなジャンル',
+                    data: [8, 10, 8, 8, 7,
+                        6, 8, 8, 7, 9,
+                        6, 7, 9, 4, 6,
+                        6, 8, 10, 6, 10],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: { r: { suggestedMin: 0, suggestedMax: 10 } },
+                responsive: true,
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        const techCtx = document.getElementById('techChart');
+        new Chart(techCtx, {
+            type: 'radar',
+            data: {
+                labels: ['C#', 'Python', 'JavaScript', "C++", "C",
+                    "Java", "Dart/Flutter", "UnrealEngine", 'Unity', 'GitHub',
+                    "PostgreSQL", "Linuxサーバ"],
+                datasets: [{
+                    label: '得意度',
+                    data: [
+                        8, 10, 7, 6, 8,
+                        6, 8, 7, 9, 8,
+                        6, 6
+                    ],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: { r: { suggestedMin: 0, suggestedMax: 10 } },
+                responsive: true,
+                plugins: { legend: { display: false } }
+            }
+        });
+    </script>
+    <script>
+        // === フェードインアニメーション ===
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // 一度だけ実行
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+
+</html>

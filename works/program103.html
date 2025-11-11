@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品紹介 - AIポテト君</title>
+    <link rel="stylesheet" href="../assets/css/works.css">
+    <link rel="icon" href="../assets/images/fav.png" type="image/png">
+</head>
+
+<body>
+    <!-- ===== ヘッダー ===== -->
+    <header>
+        <h1>塩ポテト君 Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">トップページ</a></li>
+                <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
+                <li><a href="index.html?tab=program">プログラム作品一覧</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- ===== メインコンテンツ ===== -->
+  <main>
+    <h1 style="background-color: #333;color: white;">AIポテト君</h1>
+
+    <section class="meta" style="width: 90%;margin-left: 5%;text-align: left;">
+      <div><strong>使用言語・ツール：</strong> Python </div>
+      <div><strong>リリース日：</strong> 2024年8月から公開しつつ継続的に開発</div>
+    </section>
+
+    <section style="width: 90%;margin-left: 5%;text-align: left;">
+      <h2>作品紹介</h2>
+      <p>
+        SNS「Misskey」上において、ユーザを楽しませるジョークAIとして開発しました。<br>
+        投稿を自動作成して投稿する機能、Misskeyの機能を使ってオセロをする機能、占いを生成して投稿する機能など様々な遊び心のある機能を実装しています。
+      </p>
+      <img src="../assets/images/program103_1.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <p>
+        また、天気予報といった便利な機能も実装しました。
+      </p>
+      <img src="../assets/images/program103_2.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+    </section>
+
+    <section style="width: 90%;margin-left: 5%;text-align: left;">
+      <h2>工夫点・技術的特徴</h2>
+      <p>
+        支離滅裂感のある面白い投稿を作ってもらうため、高機能なAIは使っていません。<br>
+        投稿の生成には主にマルコフ連鎖を使っています。<br>
+        リクエストに応じて、そのユーザの投稿を分析してワードクラウドを作るようなこともできます。<br>
+        汎用化してAIPC(AIPotatokunController)と名付け、OSSとしてGitHubに公開もしました。<br>
+        オセロAIはゲームアルゴリズムの知識を使いアルファベータ法で実装しました。<br>
+        現在のAIポテト君はSNSの管理者の許可を得て管理者が所有するサーバ上で動作しています。その際にLinuxの操作やDockerの使用方法なども学びました。
+      </p>
+    </section>
+
+    <section class="links" style="width: 90%;margin-left: 5%;text-align: left;">
+      <h2>作品リンク</h2>
+      <a href="https://github.com/PotatoTimeKun/programming/tree/main/Python/AIPC" target="_blank">GitHubソース(AIPC)</a><br>
+      <a href="https://sushi.ski/@potatokunbot" target="_blank">AIポテト君のSNSリンク</a>
+    </section>
+  </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

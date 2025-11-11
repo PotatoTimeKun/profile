@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品紹介 - 乱数将棋</title>
+    <link rel="stylesheet" href="../assets/css/works.css">
+    <link rel="icon" href="../assets/images/fav.png" type="image/png">
+</head>
+
+<body>
+    <!-- ===== ヘッダー ===== -->
+    <header>
+        <h1>塩ポテト君 Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">トップページ</a></li>
+                <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
+                <li><a href="index.html?tab=program">プログラム作品一覧</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- ===== メインコンテンツ ===== -->
+  <main>
+    <h1 style="background-color: #333;color: white;">乱数将棋</h1>
+
+    <section class="meta" style="width: 90%;margin-left: 5%;text-align: left;">
+      <div><strong>使用言語・ツール：</strong> Flutter</div>
+      <div><strong>リリース日：</strong> 2022年7月3日</div>
+    </section>
+
+    <section style="width: 90%;margin-left: 5%;text-align: left;">
+      <h2>作品紹介</h2>
+      <p>
+        高専にいたときに、Flutterを自主的に学習して制作したものです。<br>
+        乱数を生成するアルゴリズムの実験をした際に着想を得ました。
+      </p>
+      <img src="../assets/images/game104_1.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <p>
+        複数のモードを用意し、将棋のコマが1マスずつランダムに動くモードや、爆弾を避けるモード、飛んでくる将棋を避けるリアルタイム性のあるモードなどを用意しました。<br>
+        また、お気に入りの試合を保存して再現することもできます。
+      </p>
+      <img src="../assets/images/game104_2.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+    </section>
+
+    <section style="width: 90%;margin-left: 5%;text-align: left;">
+      <h2>工夫点・技術的特徴</h2>
+      <p>
+        乱数生成のアルゴリズムを学んで生まれたものでもあるので、Dartに用意されているものではなく線形合同法の乱数生成器を一から実装しています。<br>
+        試合を保存して再現する際には、全データを保存するのではなく、乱数シードとユーザ入力だけを保存することによって再現をしています。
+      </p>
+      <img src="../assets/images/game104_3.png" alt="技術紹介" class="preview" class="preview" style="width:100%;max-width: 400px;">
+
+    </section>
+
+    <section class="links" style="width: 90%;margin-left: 5%;text-align: left;">
+      <h2>作品リンク</h2>
+      <a href="https://github.com/PotatoTimeKun/programming/tree/main/Dart/shogi" target="_blank">GitHubソース</a><br>
+      <a href="https://potatotimekun.github.io/flutter_web/shogi/" target="_blank">ブラウザ版実行ページ</a>
+    </section>
+  </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

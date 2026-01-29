@@ -33,26 +33,40 @@
     <section style="width: 90%;margin-left: 5%;text-align: left;">
       <h2>作品紹介</h2>
       <p>
-        初めてSteamにリリースした作品です。<br>
+        初めて<b>Steamにリリース</b>した作品です。<br>
         シンプルなパズルゲームで、六角形をスライドし、ルールに沿って整列させることでパズルを解きます。
       </p>
       <img src="../assets/images/game100_1.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
       <img src="../assets/images/game100_2.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
       <p>
-        ステージは28個、特殊ギミックは3種類用意しています。
+        ステージは28個、特殊ギミックは4種類用意しています。
       </p>
       <img src="../assets/images/game100_3.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
       <img src="../assets/images/game100_4.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <h3>特殊ギミック1 回転</h3>
+      <p>動かすことで数字が回転するため、<b>先を読みながら移動</b>する必要があります。</p>
+      <img src="../assets/images/game100_10.jpg" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <h3>特殊ギミック2 重なり</h3>
       <p>
-        シンプルなルールでありながら、ステージの構成を工夫することで、考えて解く楽しさを演出しています。
+        他の六角形に重ねることができますが、数のカウントは増えます。<br>
+        他の六角形をすり抜けて移動ができるなど、特殊な挙動をすることで、<b>パズルの単調さを減らす</b>役割を持ちます。
       </p>
+      <img src="../assets/images/game100_11.jpg" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <h3>特殊ギミック3 削除</h3>
+      <p>動かすことで移動する線が削除されるため、<b>移動する順序を慎重に考える</b>必要があります。</p>
+      <img src="../assets/images/game100_12.jpg" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <h3>特殊ギミック4 一方通行</h3>
+      <p>移動する線を一方通行にします。こちらも、移動する順序を考えさせる役割があります。</p>
+      <img src="../assets/images/game100_thumb.jpg" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <p>
+        シンプルなルールでありながら、特殊ギミックの追加やステージ構成の工夫を行い、<b>考えて解く楽しさ</b>を演出しています。<br>
+        また、Steamの実績機能を使用することで、<b>コンプリートを分かりやすく伝え、達成感を与える</b>ことができます。
+      </p>
+      <img src="../assets/images/game100_13.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 300px;">
     </section>
 
     <section style="width: 90%;margin-left: 5%;text-align: left;">
       <h2>設計</h2>
-      <p>
-        個人開発のため、企画を細部まで練らずに、アイディアを元に設計から始めました。
-      </p>
       <p>画面構成</p>
       <img src="../assets/images/game100_5.png" alt="設計図" class="preview" class="preview" style="width:100%;max-width: 400px;">
       <p>UMLクラス図</p>
@@ -66,7 +80,6 @@
     <section style="width: 90%;margin-left: 5%;text-align: left;">
       <h2>工夫点・技術的特徴</h2>
       <p>
-        このゲームは、スライドするというシンプルな操作だけで解くことができるのが特徴です。<br>
         各ステージのデータはJSONファイルとして構造化して作成しています。パズルゲームということもあり、ステージデータの作成にかなり時間がかかりました。<br>
         Steamworksの開発者登録や、販促画像・動画の作成、様々な説明文を英文和文ともに用意するなど、Steamに配信するための作業も大変でした。<br>
         Steamでは現在2025/10/28の時点で、219人のユーザにプレイされました。<br>

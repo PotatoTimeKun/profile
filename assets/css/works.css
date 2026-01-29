@@ -38,11 +38,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #e96b88;
+    color: #ff9970;
 }
 
 a {
-    color: #e96b88;
+    color: #ff9970;
     text-decoration: none;
 }
 
@@ -69,7 +69,7 @@ a:hover {
 }
 
 .tab-button.active {
-    background: #ffb6c1;
+    background: #ff9970;
     font-weight: bold;
 }
 
@@ -112,6 +112,10 @@ a:hover {
 
 .hidden {
     display: none;
+}
+
+b {
+    color: #ff9970;
 }
 
 /* ===== フェードインアニメーション ===== */
@@ -160,7 +164,7 @@ footer {
 
 .button {
     display: inline-block;
-    background-color: #e96b88;
+    background-color: #ff9970;
     color: white;
     padding: 0.8rem 1.6rem;
     border-radius: 9999px;
@@ -169,5 +173,5 @@ footer {
 }
 
 .button:hover {
-    background-color: #ff8ca6;
+    background-color: #ff9970;
 }

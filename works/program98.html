@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品紹介 - はじめ語変換ツール</title>
+    <link rel="stylesheet" href="../assets/css/works.css">
+    <link rel="icon" href="../assets/images/fav.png" type="image/png">
+</head>
+
+<body>
+    <!-- ===== ヘッダー ===== -->
+    <header>
+        <h1>塩ポテト君 Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">トップページ</a></li>
+                <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
+                <li><a href="index.html?tab=program">プログラム作品一覧</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- ===== メインコンテンツ ===== -->
+  <main>
+    <h1 style="background-color: #333;color: white;">はじめ語変換ツール</h1>
+
+    <section class="meta" style="width: 90%;margin-left: 5%;text-align: left;">
+      <div><strong>使用言語・ツール：</strong> HTML / CSS / JavaScript </div>
+      <div><strong>リリース日：</strong> 2026年2月2日</div>
+    </section>
+
+    <section style="width: 90%;margin-left: 5%;text-align: left;">
+      <h2>作品紹介</h2>
+      <iframe style="max-width: 100%;" width="560" height="315" src="https://www.youtube.com/embed/Dne59gHseH8?si=Jyl1kbyL2OChYdqt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>
+        ホロライブ所属Vtuber「轟はじめ」さんの独特な発音を言語学的に研究すると共に、それを再現するためのツールを作りました。<br>
+        本作品はファンとしての二次創作であり、ファンの間で盛り上がれるようにすることを目的としています。
+      </p>
+    </section>
+    <section style="width: 90%;margin-left: 5%;text-align: left;">
+      <h2>研究概要</h2>
+      <p>
+        ここでは動画の内容を短くまとめます。<br>
+        まず、この研究は別の方による先行の研究<a href="https://www.youtube.com/watch?v=i3Hhid-yemY" target="_blank">(動画リンク)</a>を元にしています。<br>
+        先行研究では、以下のような変化法則を立てていました。
+      </p>
+      <p>子音の変化</p>
+      <img src="../assets/images/program98_1.png" class="preview" style="width:100%;max-width: 500px;">
+      <p>母音の変化</p>
+      <img src="../assets/images/program98_2.png" class="preview" style="width:100%;max-width: 500px;">
+      <p>
+        これに対して更に細かく研究を行い、新たな変化法則を見つけました。
+      </p>
+      <p>サ行の変化</p>
+      <img src="../assets/images/program98_3.png" class="preview" style="width:100%;max-width: 500px;">
+      <p>ダ行とラ行の交代</p>
+      <img src="../assets/images/program98_4.png" class="preview" style="width:100%;max-width: 500px;">
+      <p>母音の変化</p>
+      <img src="../assets/images/program98_5.png" class="preview" style="width:100%;max-width: 500px;">
+      <p>メカニズムとして、以下のように舌のコントロールが乱れること、また、舌が通常より後ろ側にある可能性を示しました。</p>
+      <img src="../assets/images/program98_6.png" class="preview" style="width:100%;max-width: 500px;">
+      <p>
+        これを元に変換ツールの開発を作成し、公開しました。<br>
+        研究から同じ文章でも発音が完全には一致しないことが分かっていたため、変換ルールと文章の位置によって確率ベースでの実装を行いました。
+      </p>
+      <p>全体の流れ</p>
+      <img src="../assets/images/program98_7.png" class="preview" style="width:100%;max-width: 500px;">
+      <p>コア機能(はじめ語変換)の詳細</p>
+      <img src="../assets/images/program98_8.png" class="preview" style="width:100%;max-width: 500px;">
+    </section>
+
+    <section class="links" style="width: 90%;margin-left: 5%;text-align: left;">
+      <h2>作品リンク</h2>
+      <a class="button" href="https://potatotimekun.github.io/HajimegoTranslator/" target="_blank">はじめ語変換ツール(ブラウザ)</a><br><br>
+      <a class="button" href="https://github.com/PotatoTimeKun/HajimegoTranslator" target="_blank">GitHubソース</a>
+    </section>
+  </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

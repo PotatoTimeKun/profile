@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品紹介 - MAMH</title>
-    <link rel="stylesheet" href="../assets/css/works.css">
+    <link rel="stylesheet" href="../assets/css/works.css?v=1.3">
     <link rel="icon" href="../assets/images/fav.png" type="image/png">
 </head>
 
@@ -12,7 +12,15 @@
     <!-- ===== ヘッダー ===== -->
     <header>
         <h1>塩ポテト君 Portfolio</h1>
-        <nav>
+        
+    <!-- Hamburger button -->
+    <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
             <ul>
                 <li><a href="../index.html">トップページ</a></li>
                 <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
@@ -23,34 +31,34 @@
 
   <!-- ===== メインコンテンツ ===== -->
   <main>
-    <h1 style="background-color: #333;color: white;">Misskey Analyzer for Mental Health</h1>
+    <h1 class="article-title">Misskey Analyzer for Mental Health</h1>
 
-    <section class="meta" style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section meta">
       <div><strong>使用言語・ツール：</strong> Python</div>
       <div><strong>リリース日：</strong> 2024年10月4日</div>
     </section>
 
-    <section style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section">
       <h2>作品紹介</h2>
       <p>
         MisskeyというSNS向けで、投稿内容をAIで解析するツールです。<br>
         メンタルヘルスに役立てることを目的としています。
       </p>
-      <img src="../assets/images/program100_1.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <img src="../assets/images/program100_1.png" alt="作品プレビュー">
     </section>
 
-    <section style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section">
       <h2>工夫点・技術的特徴</h2>
       <p>
         制作のきっかけには僕自身が色々悩んでいてストレスを受けていた時期だったということもあります。<br>
         Misskeyはオープンソースで公開された分散型SNSで、ユーザも使用可能なAPIの機能が充実しています。<br>
         制作前には以下のようなUMLベースの設計図を用意しました。
       </p>
-      <img src="../assets/images/program100_2.png" alt="技術紹介" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <img src="../assets/images/program100_2.png" alt="技術紹介">
       <p>細かい技術的要素は<a target="_blank" href="https://qiita.com/potatotimekun/items/0c44fffc8341ac5843a3">Qiita</a>にまとめています。</p>
     </section>
 
-    <section class="links" style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section links">
       <h2>作品リンク</h2>
       <a class="button" href="https://github.com/PotatoTimeKun/programming/tree/main/Python/analyze_note" target="_blank">GitHubソース</a><br><br>
       <a class="button" href="https://drive.google.com/file/d/1NHxgU8l2WE_8HQI9eKFXzdMgqYMwcd9y/view?usp=drive_link" target="_blank">ダウンロードページ</a>
@@ -61,5 +69,15 @@
     <footer>
         <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
     </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      if(nav) nav.classList.toggle('active');
+      const btn = document.querySelector('.hamburger-btn');
+      if(btn) btn.classList.toggle('active');
+    }
+  </script>
 </body>
+
 </html>

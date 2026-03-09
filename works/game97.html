@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品紹介 - 芋からの脱出</title>
-    <link rel="stylesheet" href="../assets/css/works.css">
+    <link rel="stylesheet" href="../assets/css/works.css?v=1.3">
     <link rel="icon" href="../assets/images/fav.png" type="image/png">
 </head>
 
@@ -12,7 +12,15 @@
     <!-- ===== ヘッダー ===== -->
     <header>
         <h1>塩ポテト君 Portfolio</h1>
-        <nav>
+        
+    <!-- Hamburger button -->
+    <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
             <ul>
                 <li><a href="../index.html">トップページ</a></li>
                 <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
@@ -23,28 +31,28 @@
 
   <!-- ===== メインコンテンツ ===== -->
   <main>
-    <h1 style="background-color: #333;color: white;">芋からの脱出</h1>
+    <h1 class="article-title">芋からの脱出</h1>
 
-    <section class="meta" style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section meta">
       <div><strong>使用言語・ツール：</strong> UnrealEngine</div>
       <div><strong>リリース予定日：</strong> 2026年3月</div>
     </section>
 
-    <section style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section">
       <h2>作品紹介</h2>
       <p>
         UE5の授業で学んだことをベースに自主学習を進めながら開発しているゲームです。<br>
         ホラーゲームで、芋のキャラクターから逃げながら脱出を目指します。
       </p>
-      <img src="../assets/images/game97_thumb.jpg" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <img src="../assets/images/game97_thumb.jpg" alt="作品プレビュー">
     </section>
 
-    <section style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section">
       <h2>工夫点・技術的特徴</h2>
       <p>
         キャラクターのモデルはBlenderによって作成しました。(ただし手の素材はフリー素材を改変したものです。)
       </p>
-      <img src="../assets/images/game97_2.webp" alt="技術紹介" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <img src="../assets/images/game97_2.webp" alt="技術紹介">
       <p>
         明るさ、色味、霧の調整などで不気味な雰囲気になるように調整をしました。<br>
         マップの作成や敵キャラクターの動きなどにも力を入れました。<br>
@@ -57,5 +65,15 @@
     <footer>
         <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
     </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      if(nav) nav.classList.toggle('active');
+      const btn = document.querySelector('.hamburger-btn');
+      if(btn) btn.classList.toggle('active');
+    }
+  </script>
 </body>
+
 </html>

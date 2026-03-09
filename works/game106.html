@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品紹介 - アンコリーノゲーム</title>
-    <link rel="stylesheet" href="../assets/css/works.css">
+    <link rel="stylesheet" href="../assets/css/works.css?v=1.3">
     <link rel="icon" href="../assets/images/fav.png" type="image/png">
 </head>
 
@@ -12,7 +12,15 @@
     <!-- ===== ヘッダー ===== -->
     <header>
         <h1>塩ポテト君 Portfolio</h1>
-        <nav>
+        
+    <!-- Hamburger button -->
+    <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
             <ul>
                 <li><a href="../index.html">トップページ</a></li>
                 <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
@@ -23,23 +31,23 @@
 
   <!-- ===== メインコンテンツ ===== -->
   <main>
-    <h1 style="background-color: #333;color: white;">アンコリーノゲーム</h1>
+    <h1 class="article-title">アンコリーノゲーム</h1>
 
-    <section class="meta" style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section meta">
       <div><strong>使用言語・ツール：</strong> Unity</div>
       <div><strong>リリース日：</strong> 2023年10月8日</div>
     </section>
 
-    <section style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section">
       <h2>作品紹介</h2>
       <p>
         Unityを初めて学習した際の制作物です。<br>
         ちょうどスイカゲームが流行っていたので、その再現を目指しました。
       </p>
-      <img src="../assets/images/game106_thumb.png" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <img src="../assets/images/game106_thumb.png" alt="作品プレビュー">
     </section>
 
-    <section class="links" style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section links">
       <h2>作品リンク</h2>
       <a class="button" href="https://www.dropbox.com/scl/fi/5en8xvvz2r5dx1leq40di/suika_game.zip?rlkey=1xo779x2nssllu7v0pyhh5gwm&dl=0" target="_blank">ダウンロードページ(Windows版)</a><br><br>
       <a class="button" href="https://www.dropbox.com/scl/fi/ipdhrlkl7mi0ghpmeifco/suika.apk?rlkey=ermt5k4t727scrm80gu24e9je&dl=0" target="_blank">ダウンロードページ(Android版)</a>
@@ -50,5 +58,15 @@
     <footer>
         <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
     </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      if(nav) nav.classList.toggle('active');
+      const btn = document.querySelector('.hamburger-btn');
+      if(btn) btn.classList.toggle('active');
+    }
+  </script>
 </body>
+
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品紹介 - ESC・Enigma-謎の館-</title>
-    <link rel="stylesheet" href="../assets/css/works.css">
+    <link rel="stylesheet" href="../assets/css/works.css?v=1.3">
     <link rel="icon" href="../assets/images/fav.png" type="image/png">
 </head>
 
@@ -12,7 +12,15 @@
     <!-- ===== ヘッダー ===== -->
     <header>
         <h1>塩ポテト君 Portfolio</h1>
-        <nav>
+        
+    <!-- Hamburger button -->
+    <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
             <ul>
                 <li><a href="../index.html">トップページ</a></li>
                 <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
@@ -23,23 +31,23 @@
 
   <!-- ===== メインコンテンツ ===== -->
   <main>
-    <h1 style="background-color: #333;color: white;">ESC・Enigma-謎の館-</h1>
+    <h1 class="article-title">ESC・Enigma-謎の館-</h1>
 
-    <section class="meta" style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section meta">
       <div><strong>使用言語・ツール：</strong> Unity</div>
       <div><strong>リリース予定日：</strong> 期限なし(完成次第公開)</div>
     </section>
 
-    <section style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section">
       <h2>作品紹介</h2>
       <p>
         プログラミング担当の「PotatoTimeKun」とUIデザイン・イラスト担当の「楽縁陸」の共同で開発を進めているゲームです。<br>
         謎解きをベースとし、不思議な生き物との会話をしながら洋館からの脱出を目指します。
       </p>
-      <img src="../assets/images/game99_thumb.webp" alt="作品プレビュー" class="preview" class="preview" style="width:100%;max-width: 400px;">
+      <img src="../assets/images/game99_thumb.webp" alt="作品プレビュー">
     </section>
 
-    <section style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section">
       <h2>工夫点・技術的特徴</h2>
       <p>
         共同で開発をするというのは初めての試みです。<br>
@@ -48,7 +56,7 @@
       </p>
     </section>
 
-    <section class="links" style="width: 90%;margin-left: 5%;text-align: left;">
+    <section class="article-section links">
       <h2>作品リンク</h2>
       Steamに配信予定
     </section>
@@ -58,5 +66,15 @@
     <footer>
         <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
     </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      if(nav) nav.classList.toggle('active');
+      const btn = document.querySelector('.hamburger-btn');
+      if(btn) btn.classList.toggle('active');
+    }
+  </script>
 </body>
+
 </html>

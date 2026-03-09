@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品紹介 - 私を構成する9つの能力</title>
-    <link rel="stylesheet" href="../assets/css/works.css">
+    <link rel="stylesheet" href="../assets/css/works.css?v=1.3">
     <link rel="icon" href="../assets/images/fav.png" type="image/png">
 </head>
 
@@ -13,7 +13,15 @@
     <!-- ===== ヘッダー ===== -->
     <header>
         <h1>塩ポテト君 Portfolio</h1>
-        <nav>
+        
+    <!-- Hamburger button -->
+    <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
             <ul>
                 <li><a href="../index.html">トップページ</a></li>
                 <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
@@ -24,32 +32,32 @@
 
     <!-- ===== メインコンテンツ ===== -->
     <main>
-        <h1 style="background-color: #333;color: white;">私を構成する9つの能力</h1>
+        <h1 class="article-title">私を構成する9つの能力</h1>
 
-        <section class="meta" style="width: 90%;margin-left: 5%;text-align: left;">
+        <section class="article-section meta">
             <div><strong>使用言語・ツール：</strong> HTML / CSS / JavaScript / Antigravity / Microsoft PlayFab</div>
             <div><strong>リリース日：</strong> 2026年3月</div>
         </section>
 
-        <section style="width: 90%;margin-left: 5%;text-align: left;">
+        <section class="article-section">
             <h2>プレイ動画</h2>
             <video src="../assets/images/9ability/プレイ動画.mp4" controls class="preview"
                 style="width:100%;max-width: 600px;margin-bottom: 20px;"></video>
             <h2>企画書</h2>
             <p>開発初期の簡易的な企画書です。</p>
             <img src="../assets/images/9ability/pdf_page_1.png" alt="企画書1" class="preview"
-                style="width:100%;max-width: 400px;">
+               >
             <img src="../assets/images/9ability/pdf_page_2.png" alt="企画書2" class="preview"
-                style="width:100%;max-width: 400px;">
+               >
             <img src="../assets/images/9ability/pdf_page_3.png" alt="企画書3" class="preview"
-                style="width:100%;max-width: 400px;">
+               >
             <img src="../assets/images/9ability/pdf_page_4.png" alt="企画書4" class="preview"
-                style="width:100%;max-width: 400px;">
+               >
             <img src="../assets/images/9ability/pdf_page_5.png" alt="企画書5" class="preview"
-                style="width:100%;max-width: 400px;">
+               >
         </section>
 
-        <section style="width: 90%;margin-left: 5%;text-align: left;">
+        <section class="article-section">
             <h2>作品紹介</h2>
 
             <p>
@@ -58,29 +66,29 @@
                 PCとスマホの両対応で、<strong>プラットフォームに依存しない表示・操作</strong>を実現しています。
             </p>
             <img src="../assets/images/9ability/選択画面.webp" alt="選択画面" class="preview"
-                style="width:100%;max-width: 400px;">
+               >
         </section>
 
-        <section style="width: 90%;margin-left: 5%;text-align: left;">
+        <section class="article-section">
             <h2>工夫点・技術的特徴</h2>
             <p>
                 多くの能力・配置ボーナスで組み合わせを考える<strong>デッキ構築ゲーム</strong>としての面白さを出しつつ、ヴァンサバライクでもゲーム中は<b>ノンストップで進められる工夫</b>をしています。<br>
                 色で属性がわかれ、同じ属性（攻撃・防御・特殊）を縦横に並べるとリーチや威力が上がる<b>「ビンゴ要素」</b>があります。斜めは他のビンゴを邪魔する分強く強化できます。
             </p>
-            <img src="../assets/images/9ability/ボス戦.png" alt="ボス戦" class="preview" style="width:100%;max-width: 400px;">
+            <img src="../assets/images/9ability/ボス戦.png" alt="ボス戦" class="preview">
             <p>
                 また、コミュニティ性強化のための工夫として、リザルト画面から<b>X(旧Twitter)へハッシュタグ「#私を構成する9つの能力」付きで投稿</b>できる機能を実装しています。<br>
                 <b>クエリストリングで能力を埋め込める</b>ようにすることで、投稿されたリンクやランキングから他プレイヤーの能力の組み合わせ（ビルド）を<b>簡単に共有・コピー</b>できるようになっています。<br>
                 ランキング機能にはゲーム用BaaSである<strong>Microsoft PlayFab</strong>を使用しました。
             </p>
             <img src="../assets/images/9ability/ランキング.png" alt="ランキング" class="preview"
-                style="width:100%;max-width: 400px;">
+               >
             <img src="../assets/images/9ability/リザルト.png" alt="リザルト" class="preview"
-                style="width:100%;max-width: 400px;">
+               >
             <p>AntigravityやPlayFabといった新しい技術に挑戦しながら、アップデートを重ねてより良いゲーム体験を目指して開発を行いました。最終的には、企画書で想定していた以上の作品へと仕上がりました。</p>
         </section>
 
-        <section class="links" style="width: 90%;margin-left: 5%;text-align: left;">
+        <section class="article-section links">
             <h2>作品リンク</h2>
             <a class="button" href="https://potatotimekun.github.io/9Ability/" target="_blank">ゲームをプレイする</a><br><br>
             <a class="button" href="https://github.com/PotatoTimeKun/9Ability" target="_blank">GitHubソース</a>
@@ -93,6 +101,16 @@
     </footer>
 
     <script src="..\assets\js\works.js"></script>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      if(nav) nav.classList.toggle('active');
+      const btn = document.querySelector('.hamburger-btn');
+      if(btn) btn.classList.toggle('active');
+    }
+  </script>
 </body>
+
 
 </html>

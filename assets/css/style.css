@@ -1,136 +1,277 @@
-/* ===== ベース設定 ===== */
+/* ===== ベース設定 (モダンダークテーマ) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;600;800&display=swap');
+
+:root {
+    --bg-base: #0f172a;
+    /* 暗い紺色背景 */
+    --bg-surface: #1e293b;
+    /* 浮き上がる要素の背景 */
+    --text-main: #f8fafc;
+    /* メインテキスト色（白寄り） */
+    --text-muted: #94a3b8;
+    /* サブテキスト色（グレー） */
+    --accent: #ff9970;
+    --accent-hover: #ffb396;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: "Segoe UI", "ヒラギノ角ゴ ProN", sans-serif;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eff6ff;
-    color: #333;
-    line-height: 1.6;
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
-    color: #ff9970;
+    color: var(--accent);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 a:hover {
+    color: var(--accent-hover);
     text-decoration: underline;
 }
 
-b {
-    color: #ff9970;
+b,
+strong {
+    color: var(--accent);
+    font-weight: 800;
 }
 
-/* ===== ヘッダー ===== */
+/* ===== ヘッダー (グラスモーフィズム) ===== */
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 2rem;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    padding: 1rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 800;
     margin: 0;
+    letter-spacing: 0.05em;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.2rem;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
 }
 
 nav a {
-    color: white;
-    font-weight: bold;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #ff9970;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* ===== セクション共通 ===== */
 .section {
-    padding: 1rem 1rem;
+    padding: 4rem 2rem;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .section h2 {
-    border-left: 5px solid #ff9970;
-    padding-left: 0.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-left: 5px solid var(--accent);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    font-weight: 800;
+}
+
+.section p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
 }
 
 .section ul {
-    list-style: square;
-    margin-left: 1.5rem;
+    list-style: none;
+    padding-left: 0;
 }
 
-#charts canvas {
-    max-width: 500px;
-    max-height: 500px;
+.section ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
 }
 
+.section ul li::before {
+    content: '▹';
+    color: var(--accent);
+    margin-right: 10px;
+    font-weight: bold;
+}
 
 /* ===== ボタン ===== */
 .button {
     display: inline-block;
-    background-color: #ff9970;
-    color: white;
-    padding: 0.8rem 1.6rem;
-    border-radius: 9999px;
-    font-weight: bold;
-    transition: 0.2s;
+    background-color: var(--accent);
+    color: #1a1a1a;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(255, 153, 112, 0.3);
 }
 
 .button:hover {
-    background-color: #ff9970;
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 153, 112, 0.4);
+    text-decoration: none;
+    color: #1a1a1a;
 }
 
 /* ===== フッター ===== */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #0b1120;
+    color: var(--text-muted);
     text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
+    padding: 2rem;
+    margin-top: 4rem;
     font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* ===== レスポンシブ対応 ===== */
+/* ===== ハンバーガーメニュー ===== */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
 
-/* --- スマホ向け --- */
-@media (max-width: 700px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.hamburger-btn span {
+    width: 30px;
+    height: 3px;
+    background: var(--text-main);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    transform-origin: 1px;
+}
 
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
 
-    canvas {
-        width: 100% !important;
-        height: auto !important;
-    }
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* ===== チャートエリア ===== */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* ===== フェードインアニメーション ===== */
 .section {
     opacity: 0;
-    transform: translateY(60px);
-    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .section.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 999;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
 }

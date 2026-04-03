@@ -14,15 +14,15 @@
     <!-- ===== ヘッダー ===== -->
     <header>
         <h1>塩ポテト君 Portfolio</h1>
-        
-    <!-- Hamburger button -->
-    <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
 
-    <nav>
+        <!-- Hamburger button -->
+        <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
             <ul>
                 <li><a href="#about">自己紹介</a></li>
                 <li><a href="#charts">マイチャート</a></li>
@@ -39,7 +39,7 @@
             <h2>自己紹介</h2>
             <p>
                 専門学校でゲームプログラミングを学んでいる<b>塩ポテト君(PotatoTimeKun)</b>です。<br>
-                中学からプログラミングを初め、高専ではアセンブリやC言語でのアルゴリズム実装、メモリ管理から応用情報技術者試験の取得など<b>低レイヤも含めた情報工学全般</b>を学びました。<br>
+                中学からプログラミングを初め、高専ではアセンブリでのマイコン制御やC言語でのアルゴリズム実装、応用情報技術者試験の取得など<b>低レイヤも含めた情報工学全般</b>を学びました。<br>
                 独学でも多くのことに興味を持って学び、<b>ゲーム開発を中心</b>として、フロントエンドだけでなく<b>バックエンドや支援ツールなどの周辺技術も合わせた幅広い技術領域</b>で学んでいます。<br>
                 技術だけでなく、設計手法の学習や、チーム開発でのタスク管理・設計、Steamでのゲーム運営など<b>開発以外の経験</b>も積んでいます。<br>
                 個人開発・チーム開発どちらも手掛け、チーム開発では<b>チームを引っ張るリーダ</b>として、個人開発では企画から設計、開発、運営保守まですべて行う<b>フルスタックな開発者</b>として活躍しています。
@@ -146,14 +146,14 @@
         sections.forEach(section => observer.observe(section));
     </script>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.querySelector('nav');
-      if(nav) nav.classList.toggle('active');
-      const btn = document.querySelector('.hamburger-btn');
-      if(btn) btn.classList.toggle('active');
-    }
-  </script>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            if (nav) nav.classList.toggle('active');
+            const btn = document.querySelector('.hamburger-btn');
+            if (btn) btn.classList.toggle('active');
+        }
+    </script>
 </body>
 
 

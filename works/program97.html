@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品紹介 - すしすきーマイクラサーバー</title>
+  <link rel="stylesheet" href="../assets/css/works.css?v=1.3">
+  <link rel="icon" href="../assets/images/fav.png" type="image/png">
+</head>
+
+<body>
+  <!-- ===== ヘッダー ===== -->
+  <header>
+    <h1>塩ポテト君 Portfolio</h1>
+
+    <!-- Hamburger button -->
+    <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">トップページ</a></li>
+        <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
+        <li><a href="index.html?tab=program">プログラム作品一覧</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== メインコンテンツ ===== -->
+  <main>
+    <h1 class="article-title">すしすきーマイクラサーバー</h1>
+
+    <section class="article-section meta">
+      <div><strong>使用技術・ツール：</strong> Python / HTML / CSS / JavaScript / k3s / Ansible / Terraform</div>
+      <div><strong>リリース日：</strong> 2025年4月（Webマップ運用開始）</div>
+    </section>
+
+    <section class="article-section links">
+      <h2>各種リンク</h2>
+      <a class="button" href="https://potatotimekun.github.io/map/" target="_blank">マップページ</a>
+      <a class="button" href="https://github.com/PotatoTimeKun/map" target="_blank">GitHub (Webマップ)</a>
+      <a class="button" href="https://github.com/Tagomori0211/Minecraft-on-Kubenates" target="_blank">GitHub
+        (インフラ・サーバ構築)</a>
+    </section>
+
+    <section class="article-section">
+      <h2>概要・背景</h2>
+      <p>
+        元々は1ユーザーとして参加していた「すしすきーMinecraftサーバー」ですが、後に<b>運営メンバーとして参加</b>することになり、ワールドデータの直接取得が可能になったため、<b>観光案内に活用できるWebマップ</b>の開発を進めました。
+      </p>
+      <p>
+        さらに、<b>他の管理者とチームDevOpsを組み</b>、障害時の復旧作業、リリース予定のJava版Minecraftサーバーの開発補助やインフラ整備なども行っています。
+      </p>
+    </section>
+
+    <section class="article-section">
+      <h2>マップ開発のバージョン履歴と工夫点</h2>
+      <p>段階的に機能拡張と改良を行ってきました。</p>
+      <img src="../assets/images/program97_2d.png" alt="Sushiskey Map">
+
+      <h3>Ver 1.0 〜 1.3</h3>
+      <p>
+        最初はゲーム内の地図のスクリーンショットを直接撮影し、Leafletで読み込む簡易的なものでした。<br>
+        その後、画像を<b>256x256にリサイズしてズレ防止や読み込み速度の向上</b>を図り、マーカーや線路配置の関数化を行いました。
+      </p>
+
+      <h3>Ver 2.0</h3>
+      <p>
+        <b>検索機能を追加</b>し、任意のマーカーを検索できるようにしました。また、データを辞書のリストとしてまとめることで、データと処理を分離させ、保守性を高めました。
+      </p>
+
+      <h3>Ver 3.0 (大幅刷新)</h3>
+      <p>
+        マップデータの生成方法を大きく改修し、<b>ワールドデータ(LevelDB)からPythonプログラムを用いて直接マップ画像を生成する仕組み</b>を開発しました。<br>
+        Minecraft公式Wikiを参考にブロック名からマップカラーIDへ変換し、北側のブロックとの高低差から陰影を計算することで、ゲーム内のマップを忠実に再現しています。
+      </p>
+      <img src="../assets/images/program97_3d.png" alt="Sushiskey Map">
+      <p>
+        同時に高さ情報も保存し、<b>高さマップによる3D表示機能</b>を追加しました。<br>
+        さらに、マーカー・線路データを外部のJSONファイルとして定義し、座標情報もゲーム内座標で指定できるようにしたことで、<b>データとコードの完全な分離</b>を実現しました。
+      </p>
+    </section>
+
+    <section class="article-section">
+      <h2>サーバーインフラ・DevOpsによる運用</h2>
+      <p>
+        k3s / Ansible / Terraform を使用したサーバー構築の自動化を導入し、偶発的な障害であれば自動回復が可能な構成になっています。
+      </p>
+      <p>
+        過去の対応実績として、<b>設定情報の競合によるクラッシュループの修正</b>、<b>サーバー構成の変更に伴うIP競合でのログインエラー調査</b>、<b>MOD導入テストとその結果に基づく構成変更の提案</b>などを実際に行い、安定運用に貢献しています。
+      </p>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      if (nav) nav.classList.toggle('active');
+      const btn = document.querySelector('.hamburger-btn');
+      if (btn) btn.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>

@@ -13,15 +13,15 @@
     <!-- ===== ヘッダー ===== -->
     <header>
         <h1>塩ポテト君 Portfolio</h1>
-        
-    <!-- Hamburger button -->
-    <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
 
-    <nav>
+        <!-- Hamburger button -->
+        <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
             <ul>
                 <li><a href="../index.html">トップページ</a></li>
                 <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
@@ -157,6 +157,11 @@
 
         <!-- プログラム作品 -->
         <div class="tab-content hidden" id="program">
+            <a href="program97.html" class="work-card fade-in">
+                <img src="../assets/images/program97_thumb.png" alt="Sushiskey Map">
+                <h3>すしすきーマイクラサーバー</h3>
+                <p>Minecraft用Webマップの開発とサーバーインフラ(DevOps)運用</p>
+            </a>
             <a href="program98.html" class="work-card fade-in">
                 <img src="../assets/images/program98_thumb.png" alt="hajime">
                 <h3>はじめ語変換ツール</h3>
@@ -197,14 +202,14 @@
 
     <script src="..\assets\js\works.js"></script>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.querySelector('nav');
-      if(nav) nav.classList.toggle('active');
-      const btn = document.querySelector('.hamburger-btn');
-      if(btn) btn.classList.toggle('active');
-    }
-  </script>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            if (nav) nav.classList.toggle('active');
+            const btn = document.querySelector('.hamburger-btn');
+            if (btn) btn.classList.toggle('active');
+        }
+    </script>
 </body>
 
 

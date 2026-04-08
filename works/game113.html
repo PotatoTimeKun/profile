@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品紹介 - RevengeDeadPuzzle</title>
+  <link rel="stylesheet" href="../assets/css/works.css?v=1.3">
+  <link rel="icon" href="../assets/images/fav.png" type="image/png">
+</head>
+
+<body>
+  <!-- ===== ヘッダー ===== -->
+  <header>
+    <h1>塩ポテト君 Portfolio</h1>
+
+    <!-- Hamburger button -->
+    <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">トップページ</a></li>
+        <li><a href="index.html?tab=game">ゲーム作品一覧</a></li>
+        <li><a href="index.html?tab=program">プログラム作品一覧</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== メインコンテンツ ===== -->
+  <main>
+    <h1 class="article-title">RevengeDeadPuzzle</h1>
+
+    <section class="article-section meta">
+      <div><strong>使用技術・ツール：</strong> Unity</div>
+      <div><strong>制作期間：</strong> 2ヶ月 (3人チーム)</div>
+      <div><strong>リリース日：</strong> 2026年4月9日</div>
+      <div><strong>担当：</strong> 企画、アーキテクチャ設計、進行・UIなどのコーディング処理全般、ステージ実装、チームマネジメント</div>
+    </section>
+
+    <section class="article-section links">
+      <h2>作品リンク</h2>
+      <a class="button" href="https://unityroom.com/games/revengedeadpuzzle" target="_blank">Unityroomで遊ぶ</a>
+      <a class="button"
+        href="https://github.com/PotatoTimeKun/RevengeDeadPuzzle/tree/release/WebGL%E3%83%93%E3%83%AB%E3%83%89"
+        target="_blank">GitHubソースコード</a>
+    </section>
+
+    <section class="article-section">
+      <h2>ゲームのコンセプト</h2>
+      <p>
+        <b>「死＝ゲームオーバー」ではない、死を積み重ねることで進む</b>アクション型パズルゲームです。<br>
+        プレイヤーが死亡して残した「死体」を足場にしたり、ギミックの一部として活用するなど、死を単なる失敗ではなく攻略の重要なプロセスとして再定義しました。
+      </p>
+
+      <!-- プレイ動画 -->
+      <video src="../assets/images/game113/プレイ動画.mp4" controls autoplay muted loop
+        style="width:100%;max-width: 90vw;max-width: 800px;margin: 1em 0;"></video>
+
+      <img src="../assets/images/game113/ゲーム中.jpg" alt="ゲーム画面" style="width:100%;max-width: 90vw;max-width: 800px;">
+    </section>
+
+    <section class="article-section">
+      <h2>企画書</h2>
+      <div style="margin-top:1em;">
+        <img src="../assets/images/game113/slide/1.jpg" alt="企画書1" style="width:100%;max-width: 800px;">
+        <img src="../assets/images/game113/slide/2.jpg" alt="企画書2" style="width:100%;max-width: 800px;">
+        <img src="../assets/images/game113/slide/3.jpg" alt="企画書3" style="width:100%;max-width: 800px;">
+        <img src="../assets/images/game113/slide/4.jpg" alt="企画書4" style="width:100%;max-width: 800px;">
+        <img src="../assets/images/game113/slide/5.jpg" alt="企画書5" style="width:100%;max-width: 800px;">
+        <img src="../assets/images/game113/slide/6.jpg" alt="企画書6" style="width:100%;max-width: 800px;">
+        <img src="../assets/images/game113/slide/7.jpg" alt="企画書7" style="width:100%;max-width: 800px;">
+        <img src="../assets/images/game113/slide/8.jpg" alt="企画書8" style="width:100%;max-width: 800px;">
+        <img src="../assets/images/game113/slide/9.jpg" alt="企画書9" style="width:100%;max-width: 800px;">
+      </div>
+    </section>
+
+    <section class="article-section">
+      <h2>ゲーム内容のこだわり</h2>
+      <p>プレイヤーに飽きさせず、長く楽しんでもらうために以下の工夫を凝らしました。</p>
+      <ul>
+        <li><b>キーボード・コントローラー両対応：</b>操作方法の表示は、入力方式を切り替えると瞬時に対応したボタン表示に切り替わります。</li>
+        <li>
+          <b>多彩な死因とギミック：</b>基本は三人称視点ですが、死亡時のみ一人称視点に切り替えることで、臨場感やインパクトを演出しています。また、ステージごとに中心となる死因に応じたギミック（圧死体によるメダルゲーム、凍死体によるゴルフなど）を用意し、ユニークな発想を盛り込みました。
+        </li>
+        <li><b>コレクション要素：</b>プレイヤースポーン時にランダムで決まるコスチュームを集める要素を追加し、収集の楽しさを提供しています。</li>
+        <li><b>評価システムの導入：</b>ただクリアするだけでなく、各ステージに評価項目を設けることで、より良いスコアでのクリアを目指すモチベーションを高めています。</li>
+      </ul>
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:1em;">
+        <img src="../assets/images/game113/セレクト.jpg" alt="ステージセレクト" style="width:48%; min-width:300px;">
+        <img src="../assets/images/game113/コレクション.jpg" alt="コレクション" style="width:48%; min-width:300px;">
+      </div>
+    </section>
+
+    <section class="article-section">
+      <h2>工夫点：チーム運営・プロジェクト管理</h2>
+      <p>
+        本チーム開発では、円滑に制作を進めるためにドキュメントの整備と状況に合わせたタスク分配を徹底しました。<br>
+        手元の作業を明確化するため、企画書や設計図に加え、<b>仕様書、画面構成図、必要素材リスト、タスクを分解したTODOリスト、作業手順書</b>を作成し、メンバーに共有しました。<br>
+        また、<b>Git運用の見直しを行い、ブランチを徹底して活用</b>することで、作業の確実な分担と安全な統合を実現しています。
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:1em;">
+        <img src="../assets/images/game113/画面構成図.jpg" alt="画面構成図" style="width:48%; min-width:300px;">
+        <img src="../assets/images/game113/仕様書.jpg" alt="仕様書" style="width:48%; min-width:300px;">
+      </div>
+      <p>
+        開発後半、進捗の滞りが見られたためヒアリングを実施しました。<br>
+        病状の悪化で定期参加が難しいメンバーには<b>作業リストに沿った個人作業形式</b>へ、プログラミング経験が不足していたメンバーには<b>素材作成やステージ案出しなど非コーディング作業</b>へシフトさせるなど、<b>メンバーの状況に合わせたタスクの柔軟な再調整</b>を行いました。<br>
+        これらの対応により、長期休み中という限られた期限内でのリリース目標を達成することができました。
+      </p>
+    </section>
+
+    <section class="article-section">
+      <h2>工夫点：アーキテクチャ設計</h2>
+      <p>
+        前回のチーム制作作品である「<a
+          href="game96.html">タイタンXムジカーレ</a>」での、「Managerクラスの肥大化による保守性の低下（分解不足や依存関係の集中等）」「全てのデータがJSON形式だったことによる人的エラーの発生」といった反省を活かし、今回は<b>保守性と拡張性の高い設計</b>を心掛けました。
+      </p>
+      <div style="margin-top:1em; text-align:center;">
+        <img src="../assets/images/game113/クラス図.png" alt="クラス図の一部" style="width:100%;max-width: 90vw;max-width: 800px;">
+      </div>
+      <br>
+      <p><b>1. 4層アーキテクチャによる役割の分離</b></p>
+      <p>
+        クラス構成を以下の4つに分離し、チームでの役割分担を明確にするとともに、互いの干渉を最小限に抑えました。
+      </p>
+      <ul>
+        <li><b>Domain層：</b>Unityの機能に依存しない、純粋なゲームロジック</li>
+        <li><b>Application層：</b>ゲーム全体の進行管理</li>
+        <li><b>Presentation層：</b>UI操作や描画処理</li>
+        <li><b>Infrastructure層：</b>ファイルの読み書きなど、汎用性の高い外部機能</li>
+      </ul>
+      <p><b>2. GameLoopとITickableによるフレーム処理の管理</b></p>
+      <p>
+        各スクリプトで個別に <code>Update</code> メソッドを使用する代わりに、<code>ITickable</code> インターフェースを実装し、<b><code>GameLoop</code>
+          で一括管理</b>する仕組みにしました。<br>
+        これにより、<b><code>Update</code> の肥大化を防ぎ</b>、<code>MonoBehaviour</code> を継承しない純粋なロジッククラスでも毎フレームの処理が可能になりました。
+      </p>
+      <p><b>3. イベント駆動による状態監視</b></p>
+      <p>
+        ロジックや進行を管理するクラスがUI側を直接制御するのではなく、<b>イベント（Action等）を発火させる仕組み</b>にしました。<br>
+        UIやView側がそれを監視し、自律的に表示を切り替えるようにすることで、<b>内部実装と表示の疎結合</b>を実現しています。
+      </p>
+      <p><b>4. ScriptableObjectによる安全なデータ管理</b></p>
+      <p>
+        JSONなどの生データを直接編集するのをやめ、Unity標準の <code>ScriptableObject</code>
+        を用いてデータを管理するように変更しました。これにより、インスペクタ上での編集が可能になり、<b>データ作成の効率化と記述ミスによる人的エラーの防止</b>を達成しました。
+      </p>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>© 2025 PotatoTimeKun. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      if (nav) nav.classList.toggle('active');
+      const btn = document.querySelector('.hamburger-btn');
+      if (btn) btn.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>

@@ -13,7 +13,7 @@
   <!-- ===== ヘッダー ===== -->
   <header>
     <h1>塩ポテト君 Portfolio</h1>
-    
+
     <!-- Hamburger button -->
     <button class="hamburger-btn" aria-label="Menu" onclick="toggleMenu()">
       <span></span>
@@ -45,62 +45,48 @@
         初めて<b>Steamにリリース</b>した作品です。<br>
         シンプルなパズルゲームで、六角形をスライドし、ルールに沿って整列させることでパズルを解きます。
       </p>
-      <img src="../assets/images/game100_1.png" alt="作品プレビュー"
-       >
-      <img src="../assets/images/game100_2.png" alt="作品プレビュー"
-       >
+      <img src="../assets/images/game100_1.png" alt="作品プレビュー">
+      <img src="../assets/images/game100_2.png" alt="作品プレビュー">
       <p>
         ステージは28個、特殊ギミックは4種類用意しています。
       </p>
-      <img src="../assets/images/game100_3.png" alt="作品プレビュー"
-       >
-      <img src="../assets/images/game100_4.png" alt="作品プレビュー"
-       >
+      <img src="../assets/images/game100_3.png" alt="作品プレビュー">
+      <img src="../assets/images/game100_4.png" alt="作品プレビュー">
       <h3>特殊ギミック1 回転</h3>
       <p>動かすことで数字が回転するため、<b>先を読みながら移動</b>する必要があります。</p>
-      <img src="../assets/images/game100_10.jpg" alt="作品プレビュー"
-       >
+      <img src="../assets/images/game100_10.jpg" alt="作品プレビュー">
       <h3>特殊ギミック2 重なり</h3>
       <p>
         他の六角形に重ねることができますが、数のカウントは増えます。<br>
         他の六角形をすり抜けて移動ができるなど、特殊な挙動をすることで、<b>パズルの単調さを減らす</b>役割を持ちます。
       </p>
-      <img src="../assets/images/game100_11.jpg" alt="作品プレビュー"
-       >
+      <img src="../assets/images/game100_11.jpg" alt="作品プレビュー">
       <h3>特殊ギミック3 削除</h3>
       <p>動かすことで移動する線が削除されるため、<b>移動する順序を慎重に考える</b>必要があります。</p>
-      <img src="../assets/images/game100_12.jpg" alt="作品プレビュー"
-       >
+      <img src="../assets/images/game100_12.jpg" alt="作品プレビュー">
       <h3>特殊ギミック4 一方通行</h3>
       <p>移動する線を一方通行にします。こちらも、移動する順序を考えさせる役割があります。</p>
-      <img src="../assets/images/game100_thumb.jpg" alt="作品プレビュー"
-       >
+      <img src="../assets/images/game100_thumb.jpg" alt="作品プレビュー">
       <p>
         シンプルなルールでありながら、特殊ギミックの追加やステージ構成の工夫を行い、<b>考えて解く楽しさ</b>を演出しています。<br>
         また、Steamの実績機能を使用することで、<b>コンプリートを分かりやすく伝え、達成感を与える</b>ことができます。
       </p>
-      <img src="../assets/images/game100_13.png" alt="作品プレビュー"
-       >
+      <img src="../assets/images/game100_13.png" alt="作品プレビュー">
     </section>
 
     <section class="article-section">
       <h2>設計</h2>
       <p>画面構成・遷移</p>
-      <img src="../assets/images/game100_5.png" alt="設計図"
-       >
+      <img src="../assets/images/game100_5.png" alt="設計図">
       <p>UMLクラス図</p>
-      <img src="../assets/images/game100_6.png" alt="設計図"
-       >
+      <img src="../assets/images/game100_6.png" alt="設計図">
       <p>
         ブロックや移動線をクラスで定義することにより、<b>特殊ギミックの追加や変更を容易に行える</b>ようにしました。
       </p>
       <p>ゲームデータの形式</p>
-      <img src="../assets/images/game100_7.png" alt="設計図"
-       ><br>
-      <img src="../assets/images/game100_8.png" alt="設計図"
-       ><br>
-      <img src="../assets/images/game100_9.png" alt="設計図"
-       >
+      <img src="../assets/images/game100_7.png" alt="設計図"><br>
+      <img src="../assets/images/game100_8.png" alt="設計図"><br>
+      <img src="../assets/images/game100_9.png" alt="設計図">
     </section>
 
     <section class="article-section">
@@ -116,6 +102,8 @@
     <section class="article-section links">
       <h2>作品リンク</h2>
       <a class="button" href="https://store.steampowered.com/app/3857880/Slide_Hexagon/" target="_blank">Steam</a>
+      <a class="button" href="https://github.com/PotatoTimeKun/SlideHexagon" target="_blank">GitHub</a>
+      <p>※元々このプロジェクトはGit管理を行っていなかったため、物理デバイスの破損によりアップデート後のデータは紛失しています。<br>そのため、リポジトリ上にはリリース初期時のデータのみアップロードしています。</p>
     </section>
   </main>
 
@@ -127,9 +115,9 @@
   <script>
     function toggleMenu() {
       const nav = document.querySelector('nav');
-      if(nav) nav.classList.toggle('active');
+      if (nav) nav.classList.toggle('active');
       const btn = document.querySelector('.hamburger-btn');
-      if(btn) btn.classList.toggle('active');
+      if (btn) btn.classList.toggle('active');
     }
   </script>
 </body>
